@@ -1,0 +1,32 @@
+{
+	"name": "TournamentsMenu",
+	"version": "2.1.0",
+	"author": [
+		"[https://fo-nttax.de Alex Winkler]"
+	],
+	"url": "https://liquipedia.net/",
+	"descriptionmsg": "tournamentsmenu-desc",
+	"license-name": "MIT",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.35.0"
+	},
+	"MessagesDirs": {
+		"TournamentsMenu": [
+			"i18n"
+		]
+	},
+	"AutoloadNamespaces": {
+		"Liquipedia\\Extension\\TournamentsMenu\\": "src/"
+	},
+	"HookHandlers": {
+		"Main": {
+			"class": "\\Liquipedia\\Extension\\TournamentsMenu\\Hooks\\MainHookHandler"
+		}
+	},
+	"Hooks": {
+		"SkinBuildSidebar": "Main",
+		"ParserFirstCallInit": "Main"
+	},
+	"manifest_version": 2
+}
